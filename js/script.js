@@ -16,14 +16,19 @@ let colorSelected = document.getElementById("colors").value;
 rowNumber.innerHTML = rowsDisplayed;
 columnNumber.innerHTML = columnsDisplayed;
 
+const newColumnElement = () => {
+    let newColumn = document.createElement("td");
+    newColumn.setAttribute("class", "clear");
+    newColumn.addEventListener('click', changeColor);
+    return newColumn;
+}
+
 const addRow = () => {
     if (!(rowsDisplayed === rowsMax)) {
         rowsDisplayed++;
         let newRow = document.createElement("tr");
-        for (let i = 0; i < columnsDisplayed; i++) {
-            let newColumn = document.createElement("td");
-            newRow.append(newColumn);
-        }
+        for (let i = 0; i < columnsDisplayed; i++)
+            newRow.append(newColumnElement());
         grid.append(newRow);
         rowNumber.innerHTML = rowsDisplayed;
     }
@@ -40,12 +45,8 @@ const removeRow = () => {
 const addColumn = () => {
     if (!(columnsDisplayed === columnsMax)) {
         columnsDisplayed++;
-        for (row of grid.querySelectorAll("tr")) {
-            let newColumn = document.createElement("td");
-            newColumn.setAttribute("class", "clear");
-            newColumn.addEventListener('click', changeColor);
-            row.append(newColumn);
-        }
+        for (row of grid.querySelectorAll("tr"))
+            row.append(newColumnElement());
         columnNumber.innerHTML = columnsDisplayed;
     }
 }
@@ -75,4 +76,9 @@ const fillUncolored = () => {
 const fillAll = () => {
     for (cell of grid.querySelectorAll("td"))
         cell.setAttribute("class", colorSelected);
+}
+
+const clearAll = () => {
+    for (cell of grid.querySelectorAll("td"))
+        cell.setAttribute("class", "clear");
 }
