@@ -12,7 +12,6 @@ const columnsMax = parseInt(columnInput.getAttribute("max"));
 const columnsMin = parseInt(columnInput.getAttribute("min"));
 
 let colorSelected = document.getElementById("colors").value;
-
 rowNumber.innerHTML = rowsDisplayed;
 columnNumber.innerHTML = columnsDisplayed;
 
