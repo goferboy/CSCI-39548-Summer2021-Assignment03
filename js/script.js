@@ -4,6 +4,7 @@ const rowNumber = document.getElementById("row-number");
 
 let rowsDisplayed = parseInt(rowInput.getAttribute("initial"));
 let rowsMax = parseInt(rowInput.getAttribute("max"));
+let rowsMin = parseInt(rowInput.getAttribute("min"));
 let columnsDisplayed = 5;
 
 rowNumber.innerHTML = rowsDisplayed;
@@ -17,6 +18,14 @@ const addRow = () => {
             newRow.append(newColumn);
         }
         grid.append(newRow);
+        rowNumber.innerHTML = rowsDisplayed;
+    }
+}
+
+const removeRow = () => {
+    if (!(rowsDisplayed === rowsMin)) {
+        rowsDisplayed--;
+        grid.removeChild(grid.lastChild);
         rowNumber.innerHTML = rowsDisplayed;
     }
 }
