@@ -66,3 +66,8 @@ const colorPicker = () => {
 const changeColor = (event) => {
     event.target.setAttribute("class", colorSelected);
 }
+
+const fillUncolored = () => {
+    for (cell of grid.querySelectorAll(".clear"))
+        cell.setAttribute("class", colorSelected);
+}

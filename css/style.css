@@ -1,3 +1,7 @@
+#button-menu, #row-input, #column-input {
+    display: flex;
+    flex-flow: row nowrap;
+}
 tr, td{
     border:1px;
     border-style: solid;
