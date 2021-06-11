@@ -11,6 +11,8 @@ let columnsDisplayed = parseInt(columnInput.getAttribute("initial"));
 const columnsMax = parseInt(columnInput.getAttribute("max"));
 const columnsMin = parseInt(columnInput.getAttribute("min"));
 
+let colorSelected = document.getElementById("colors").value;
+
 rowNumber.innerHTML = rowsDisplayed;
 columnNumber.innerHTML = columnsDisplayed;
 
@@ -53,4 +55,8 @@ const removeColumn = () => {
             row.removeChild(row.lastChild);
         columnNumber.innerHTML = columnsDisplayed;
     }
+}
+
+const colorPicker = () => {
+    colorSelected = document.getElementById("colors").value;
 }
