@@ -45,3 +45,12 @@ const addColumn = () => {
         columnNumber.innerHTML = columnsDisplayed;
     }
 }
+
+const removeColumn = () => {
+    if (!(columnsDisplayed === columnsMin)) {
+        columnsDisplayed--;
+        for (row of grid.querySelectorAll("tr"))
+            row.removeChild(row.lastChild);
+        columnNumber.innerHTML = columnsDisplayed;
+    }
+}
