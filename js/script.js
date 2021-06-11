@@ -42,6 +42,8 @@ const addColumn = () => {
         columnsDisplayed++;
         for (row of grid.querySelectorAll("tr")) {
             let newColumn = document.createElement("td");
+            newColumn.setAttribute("class", "clear");
+            newColumn.addEventListener('click', changeColor);
             row.append(newColumn);
         }
         columnNumber.innerHTML = columnsDisplayed;
@@ -59,4 +61,8 @@ const removeColumn = () => {
 
 const colorPicker = () => {
     colorSelected = document.getElementById("colors").value;
+}
+
+const changeColor = (event) => {
+    event.target.setAttribute("class", colorSelected);
 }
