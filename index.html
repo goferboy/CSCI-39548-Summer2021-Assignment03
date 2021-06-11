@@ -3,20 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title>CSCI-39548 - Summer 2021 - Assignment #3: Gridmaker</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yantramanav" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div id="button-menu">
             <div id="row-input" min="0" max="20" initial="0">
+                <p># of Rows:</p>
                 <p id="row-number"></p>
-                <button id="add-row" onclick="addRow()">+</button>
-                <button id="remove-row" onclick="removeRow()">-</button>
+                <button id="add-row" class="grid-mod-button" onclick="addRow()">+</button>
+                <button id="remove-row" class="grid-mod-button" onclick="removeRow()">-</button>
             </div>
             <div id="column-input" min="0" max="20" initial="0">
+                <p># of Columns:</p>
                 <p id="column-number"></p>
-                <button id="add-column" onclick="addColumn()">+</button>
-                <button id="remove-column" onclick="removeColumn()">-</button>
+                <button id="add-column" class="grid-mod-button" onclick="addColumn()">+</button>
+                <button id="remove-column" class="grid-mod-button" onclick="removeColumn()">-</button>
             </div>    
             <div id="color-input">
                 <label for="colors">Color:</label>
@@ -31,9 +36,11 @@
                     <option value="white">White</option>
                 </select>
             </div>
-            <button onclick="fillUncolored()" id="fill-uncolored">Fill Uncolored</button>
-            <button onclick="fillAll()" id="fill-all">Fill All</button>
-            <button onclick="clearAll()" id="clear-all">Clear All</button>
+            <div id="fill-options">
+                <button onclick="fillUncolored()" id="fill-uncolored">Fill Uncolored</button>
+                <button onclick="fillAll()" id="fill-all">Fill All</button>
+                <button onclick="clearAll()" id="clear-all">Clear All</button>
+            </div>
         </div>
         <table id="grid">
 

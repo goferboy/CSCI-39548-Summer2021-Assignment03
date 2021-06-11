@@ -12,8 +12,8 @@ const columnsMax = parseInt(columnInput.getAttribute("max"));
 const columnsMin = parseInt(columnInput.getAttribute("min"));
 
 let colorSelected = document.getElementById("colors").value;
-rowNumber.innerHTML = rowsDisplayed;
-columnNumber.innerHTML = columnsDisplayed;
+rowNumber.innerHTML = `${rowsDisplayed} / ${rowsMax}`;
+columnNumber.innerHTML = `${columnsDisplayed} / ${columnsMax}`;
 
 const newColumnElement = () => {
     let newColumn = document.createElement("td");
@@ -29,7 +29,7 @@ const addRow = () => {
         for (let i = 0; i < columnsDisplayed; i++)
             newRow.append(newColumnElement());
         grid.append(newRow);
-        rowNumber.innerHTML = rowsDisplayed;
+        rowNumber.innerHTML = `${rowsDisplayed} / ${rowsMax}`;
     }
 }
 
@@ -37,7 +37,7 @@ const removeRow = () => {
     if (!(rowsDisplayed === rowsMin)) {
         rowsDisplayed--;
         grid.removeChild(grid.lastChild);
-        rowNumber.innerHTML = rowsDisplayed;
+        rowNumber.innerHTML = `${rowsDisplayed} / ${rowsMax}`;
     }
 }
 
@@ -46,7 +46,7 @@ const addColumn = () => {
         columnsDisplayed++;
         for (row of grid.querySelectorAll("tr"))
             row.append(newColumnElement());
-        columnNumber.innerHTML = columnsDisplayed;
+        columnNumber.innerHTML = `${columnsDisplayed} / ${columnsMax}`;
     }
 }
 
@@ -55,7 +55,7 @@ const removeColumn = () => {
         columnsDisplayed--;
         for (row of grid.querySelectorAll("tr"))
             row.removeChild(row.lastChild);
-        columnNumber.innerHTML = columnsDisplayed;
+        columnNumber.innerHTML = `${columnsDisplayed} / ${columnsMax}`;
     }
 }
 
