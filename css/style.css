@@ -18,7 +18,7 @@ button {
 
 #button-menu, #row-input, #column-input, #fill-options {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
 }
