@@ -2,8 +2,32 @@ tr, td{
     border:1px;
     border-style: solid;
 }
-td{
+td {
     height: 50px;
     width: 50px;
     background-color: white;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
 }
