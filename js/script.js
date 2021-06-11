@@ -71,3 +71,8 @@ const fillUncolored = () => {
     for (cell of grid.querySelectorAll(".clear"))
         cell.setAttribute("class", colorSelected);
 }
+
+const fillAll = () => {
+    for (cell of grid.querySelectorAll("td"))
+        cell.setAttribute("class", colorSelected);
+}
