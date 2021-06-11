@@ -1,6 +1,6 @@
 body {
     font-family: 'Yantramanav', sans-serif;
-    background-color: rgb(240, 240, 240);
+    background-color: #defcf8;
 }
 
 p {
@@ -9,9 +9,10 @@ p {
 }
 
 button {
-    margin: 2px;
+    margin: 0 2px 0 2px;
     padding: 0 6px 0 6px;
-    background-color: rgb(151, 162, 165);
+    color: white;
+    background-color: rgb(46, 143, 170);
     border: none;
     border-radius: 30px;
 }
@@ -29,7 +30,8 @@ button {
 }
 
 #row-input, #column-input, #color-input, #fill-options {
-    border: 1px solid rgb(202, 202, 202);
+    border: 1px solid rgb(46, 143, 170);
+    background-color: white;
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
@@ -40,6 +42,12 @@ button {
     height: 25px;
 }
 
+#colors {
+    background-color: rgb(46, 143, 170);
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
 
 .grid-mod-button {
     width: 25px;
