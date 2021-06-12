@@ -4,19 +4,24 @@
         <meta charset="utf-8">
         <title>CSCI-39548 - Summer 2021 - Assignment #3: Gridmaker</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        
+        <!-- Goole Fonts API -->
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Yantramanav" rel="stylesheet">
+        
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <!-- Settings for min, max, and initial values for row and column cell display amount
+             are set here in the HTML file, in the divs "row-input" and "column-input" -->
         <div id="button-menu">
-            <div id="row-input" min="0" max="20" initial="0">
+            <div id="row-input" min="0" max="20" initial="5">
                 <p># of Rows:</p>
                 <p id="row-number"></p>
                 <button id="add-row" class="grid-mod-button" onclick="addRow()">+</button>
                 <button id="remove-row" class="grid-mod-button" onclick="removeRow()">-</button>
             </div>
-            <div id="column-input" min="0" max="20" initial="0">
+            <div id="column-input" min="0" max="20" initial="5">
                 <p># of Columns:</p>
                 <p id="column-number"></p>
                 <button id="add-column" class="grid-mod-button" onclick="addColumn()">+</button>
@@ -42,7 +47,7 @@
             </div>
         </div>
         <table id="grid">
-
+            <!-- tr and td elements are added/remove from JavaScript functions -->
         </table>
         <script src="js/script.js" async defer></script>
     </body>

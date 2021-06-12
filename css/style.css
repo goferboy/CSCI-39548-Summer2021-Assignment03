@@ -3,12 +3,13 @@ body {
     background-color: #defcf8;
 }
 
+/* *****  Console Menu Styling  ***** */
 p {
     margin: 1px;
     padding: 0;
 }
 
-button {
+button, #colors {
     margin: 0 2px 0 2px;
     padding: 0 6px 0 6px;
     color: white;
@@ -17,16 +18,17 @@ button {
     border-radius: 30px;
 }
 
+.grid-mod-button {
+    width: 25px;
+    height: 25px;
+}
+
 #button-menu, #row-input, #column-input, #fill-options {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
-}
-
-#button-menu {
     margin: 5px;
-    height: 100%;
 }
 
 #row-input, #column-input, #color-input, #fill-options {
@@ -37,23 +39,12 @@ button {
     margin: 5px;
 }
 
-#row-input, #column-input, #colors, #fill-uncolored, #fill-all, #clear-all {
+#colors, #fill-uncolored, #fill-all, #clear-all {
+    height: 25px;
     font-family: 'Yantramanav', sans-serif;
-    height: 25px;
 }
 
-#colors {
-    background-color: rgb(46, 143, 170);
-    color: white;
-    border: none;
-    border-radius: 30px;
-}
-
-.grid-mod-button {
-    width: 25px;
-    height: 25px;
-}
-
+/* *****  Cell styling in the Grid  ***** */
 tr, td{
     border: 1px solid rgb(114, 114, 114)
 }
@@ -63,6 +54,7 @@ td {
     height: 50px;
 }
 
+/* *****  Color Options  ***** */
 .clear {
     background-color: rgba(255, 255, 255, 0)
 }

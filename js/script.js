@@ -15,6 +15,15 @@ let colorSelected = document.getElementById("colors").value;
 rowNumber.innerHTML = `${rowsDisplayed} / ${rowsMax}`;
 columnNumber.innerHTML = `${columnsDisplayed} / ${columnsMax}`;
 
+window.onload = () => {
+    for (let i = 0; i < rowsDisplayed; i++) {
+        let newRow = document.createElement("tr");
+        for (let j = 0; j < columnsDisplayed; j++)
+            newRow.append(newColumnElement());
+        grid.append(newRow);
+    }
+}
+
 const newColumnElement = () => {
     let newColumn = document.createElement("td");
     newColumn.setAttribute("class", "clear");
